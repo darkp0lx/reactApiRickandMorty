@@ -9,10 +9,17 @@ const DELETE_FAVORITES_SUCCESS = "DELETE_FAVORITES_SUCCESS";
 export default function reducerMorty(state = dataInitial, action) {
   switch (action.type) {
     case GET_FAVORITES_SUCCESS:
-      return {
-        ...state,
-        myList: [...state.myList, action.payload],
-      };
+      const exist=state.myList.find(item=>item.id===action.payload.id)
+      if(exist){
+        return{
+          ...state
+        }
+      }else{
+        return{
+          ...state,
+          myList:[...state.myList,action.payload]
+        }
+      }
     case DELETE_FAVORITES_SUCCESS:
       console.log(action.payload.id)
       return{

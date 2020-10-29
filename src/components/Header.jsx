@@ -1,6 +1,6 @@
 import React from "react";
 import '../assets/styles/Header.scss'
-import logo from '../assets/img/logo-platzi-video-BW2.png'
+import logo from '../assets/img/logo-b.png'
 import userIcon from '../assets/img/user-icon.png'
 class Header extends React.Component {
   render() {

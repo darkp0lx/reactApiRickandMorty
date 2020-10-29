@@ -25,21 +25,21 @@ const App = () => {
         <Categories text="page 1">
           <Carousel>
             {hook.map((item) => (
-              <ItemCarousel key={item.id} {...item} />
+              <ItemCarousel isList key={item.id} {...item} />
             ))}
           </Carousel>
         </Categories>
         <Categories text="page 2">
           <Carousel>
             {hook2.map((item) => (
-              <ItemCarousel key={item.id} {...item} />
+              <ItemCarousel isList  key={item.id} {...item} />
             ))}
           </Carousel>
         </Categories>
-        <Categories text="Page 3">
+        <Categories  text="Page 3">
           <Carousel>
             {hook3.map((item) => (
-              <ItemCarousel key={item.id} {...item} />
+              <ItemCarousel isList key={item.id} {...item} />
             ))}
           </Carousel>
         </Categories>

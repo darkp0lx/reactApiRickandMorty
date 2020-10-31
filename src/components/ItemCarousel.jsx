@@ -4,6 +4,7 @@ import plusIcon from "../assets/img/plus-icon.png";
 import { useDispatch, useSelector } from "react-redux";
 import { favoriteAction, deleteFavorite } from "../redux/mortyDucks";
 import deleteIcon from "../assets/img/deleteIcon.png";
+import { Link } from "react-router-dom";
 const ItemCarousel = (props) => {
   const { isList, id, name, image, gender, status } = props;
   const dispatch = useDispatch();
@@ -12,11 +13,14 @@ const ItemCarousel = (props) => {
       <img className="carousel-item__img" src={image} alt="" />
       <div className="carousel-item__details">
         <div>
-          <img
-            className="carousel-item__details--img"
-            src={playIcon}
-            alt="Play Icon"
-          />
+          <Link to={`/video/${id}`}>
+            <img
+              loading="lazy"
+              className="carousel-item__details--img"
+              src={playIcon}
+              alt="Play Icon"
+            />
+          </Link>
           {isList ? (
             <img
               className="carousel-item__details--img"

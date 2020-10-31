@@ -1,10 +1,12 @@
 //const
 const dataInitial = {
   myList: [],
+  user:{}
 };
 //types
 const GET_FAVORITES_SUCCESS = "GET_FAVORITES_SUCCESS";
 const DELETE_FAVORITES_SUCCESS = "DELETE_FAVORITES_SUCCESS";
+const SAVE_LOGIN="SAVE_LOGIN"
 //Reducer
 export default function reducerMorty(state = dataInitial, action) {
   switch (action.type) {
@@ -21,12 +23,16 @@ export default function reducerMorty(state = dataInitial, action) {
         }
       }
     case DELETE_FAVORITES_SUCCESS:
-      console.log(action.payload.id)
       return{
         ...state,
         myList:state.myList.filter(items=>
           items.id!==action.payload.id
         )
+      }
+    case SAVE_LOGIN:
+      return{
+        ...state,
+        user:action.payload
       }
     default:
       return state;
@@ -46,3 +52,9 @@ export const deleteFavorite = (res) => async (dispatch) => {
     payload: res,
   });
 };
+export const saveLogin=(res)=>async(dispatch)=>{
+  dispatch({
+    type:SAVE_LOGIN,
+    payload:res
+  })
+}

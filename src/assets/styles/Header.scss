@@ -1,6 +1,7 @@
+@import './Variables.scss';
 .header {
   align-items: center;
-  background: #8f57fd;
+  background: $main_color;
   color: white;
   display: flex;
   height: 100px;
@@ -55,4 +56,14 @@
   margin-right: 8px;
   width: 40px;
 }
-
+@media only screen and (max-width: 600px) {
+  .header__img {
+    width: 100px;
+  }
+  .main__title{
+    text-align: center;
+  }
+  .input::placeholder{
+    color: white;
+  }
+}

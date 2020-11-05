@@ -3,10 +3,9 @@ import "../assets/styles/Player.scss"
 const array=[
 
 ]
-const Player=(props)=>{
+const Player=()=>{
   return(
-    
-    <iframe width="640" height="480" src="https://www.youtube.com/embed/XaK0v3PNKxg" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="auto" height="auto" src="https://www.youtube.com/embed/NB-JmKiscao?list=RDXZA-flxODo8" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   )
 }
 export default Player
